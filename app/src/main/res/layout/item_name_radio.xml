@@ -47,23 +47,13 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/menuButton"
+            style="@style/Widget.AppTheme.MenuChekBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checkable="true"
             android:contentDescription=""
             app:icon="@drawable/menu_icon"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/menu_name_radio_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:backgroundTint="@color/transparent"
-            android:src="@drawable/menu_icon"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/name_radio_text_view"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
