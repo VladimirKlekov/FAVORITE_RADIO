@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ЛЮБИМОЕ РАДИО</string>
+    <string name="favourites_btn">Предпочтительные</string>
+    <string name="app_icon">Иконка</string>
+    <string name="text_nav">Добро пожаловать</string>
+    <string name="feedback">Обратная связь</string>
+    <string name="setting">Настройки</string>
+    <string name="exit">Выход</string>
+    <string name="about">Сведения</string>
+    <string name="search_view">Просмотр поиска</string>
+    <string name="main_menu">Меню</string>
+    <string name="open">Открыть</string>
+    <string name="close">Закрыть</string>
+    <string name="list_radios">Список радиостанций</string>
+</resources>

@@ -4,10 +4,10 @@ plugins {
 }
 
 android {
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
-        applicationId "radio.favoriteradio"
+        applicationId "com.example.reminder"
         minSdk 21
         targetSdk 32
         versionCode 1
@@ -29,15 +29,45 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
+    def nav_version = '2.3.5'
+    def fragment_version = "1.4.1"
+    def lifecycle_version = "2.4.1"
 
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+    def recycler_version = '1.2.1'
+
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.6.0'
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+
+    implementation "androidx.recyclerview:recyclerview:$recycler_version"
+    implementation "androidx.fragment:fragment-ktx:$fragment_version"
+
+
+    //для вьюмодели
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
+
+
+    //Glide Быстрая и эффективная библиотека загрузки изображений для Android, ориентированная на плавную прокрутку.:  //
+    //Скорость, с которой изображения могут быть декодированы.
+    //Количество помех, возникающих при декодировании изображений.
+    implementation 'com.github.bumptech.glide:glide:4.13.2'
+    //Вычислительный процессор Glide. Должен быть включен во все приложения и во все библиотеки, которые используют модули Glide для настройки
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2'
 }
+
+

@@ -40,7 +40,6 @@
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/label_radio_image_view"
-            app:layout_constraintStart_toEndtOf="@+id/label_radio_image_view"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.421"
             tools:text="Название радио" />

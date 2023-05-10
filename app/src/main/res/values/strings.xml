@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">FAVORITE RADIO</string>
+
+    //main_fragment
+    <string name="favourites_btn">Favourites</string>
+    <string name="list_radios">List of songs</string>
+    <string name="app_icon">Icon</string>
+    <string name="text_nav">Welcome to\nWorld of music</string>
+    <string name="feedback">Feedback</string>
+    <string name="setting">Settings</string>
+    <string name="about">About</string>
+    <string name="exit">Exit</string>
+    <string name="search_view">Search view</string>
+    <string name="main_menu">Menu</string>
+    <string name="open">OPEN</string>
+    <string name="close">CLOSE</string>
 </resources>

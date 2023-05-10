@@ -13,4 +13,5 @@
     <color name="transparent">@android:color/transparent</color>
     <color name="mtrl_textinput_empty_field_stroke_color">#FF0000</color>
     <color name="execution_priority_low">#01A19F</color>
+    <color name="cool_pink">#DC143C</color>
 </resources>
