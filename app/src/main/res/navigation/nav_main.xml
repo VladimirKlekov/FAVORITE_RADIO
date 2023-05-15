@@ -7,5 +7,13 @@
     <fragment
         android:id="@+id/mainFragment"
         android:name="radio.favoriteradio.ui.ui.MainFragment"
-        android:label="MainFragment" />
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_favouriteRadio"
+            app:destination="@id/favouriteRadio" />
+    </fragment>
+    <fragment
+        android:id="@+id/favouriteRadio"
+        android:name="radio.favoriteradio.ui.ui.FavouriteRadio"
+        android:label="FavouriteRadio" />
 </navigation>

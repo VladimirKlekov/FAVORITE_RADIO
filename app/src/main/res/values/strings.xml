@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">FAVORITE RADIO</string>
 
-    //main_fragment
+
     <string name="favourites_btn">Favourites</string>
     <string name="list_radios">List of songs</string>
     <string name="app_icon">Icon</string>
@@ -14,4 +14,5 @@
     <string name="main_menu">Menu</string>
     <string name="open">OPEN</string>
     <string name="close">CLOSE</string>
+    <string name="back_btn">Back</string>
 </resources>

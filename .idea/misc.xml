@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/User/Desktop/Radio/app/src/main/res/drawable/about_icon.xml" value="0.124" />
+        <entry key="..\:/Users/User/Desktop/Radio/app/src/main/res/drawable/back_icon.xml" value="0.1" />
         <entry key="..\:/Users/User/Desktop/Radio/app/src/main/res/drawable/exit_icon.xml" value="0.124" />
         <entry key="..\:/Users/User/Desktop/Radio/app/src/main/res/drawable/favorite_icon.xml" value="0.1775" />
         <entry key="..\:/Users/User/Desktop/Radio/app/src/main/res/drawable/feedback_icon.xml" value="0.124" />
@@ -15,6 +16,8 @@
         <entry key="..\:/Users/User/Desktop/Radio/app/src/main/res/drawable/settings_icon.xml" value="0.124" />
         <entry key="..\:/Users/User/Desktop/Radio/app/src/main/res/layout/activity_app.xml" value="0.1" />
         <entry key="..\:/Users/User/Desktop/Radio/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/User/Desktop/Radio/app/src/main/res/layout/fragment_favourite.xml" value="0.16530797101449277" />
+        <entry key="..\:/Users/User/Desktop/Radio/app/src/main/res/layout/item_name_favoiurite_radio.xml" value="0.17617753623188406" />
         <entry key="..\:/Users/User/Desktop/Radio/app/src/main/res/layout/item_name_radio.xml" value="0.2" />
         <entry key="..\:/Users/User/Desktop/Radio/app/src/main/res/layout/main_fragment.xml" value="0.1" />
         <entry key="..\:/Users/User/Desktop/Radio/app/src/main/res/layout/nav_header.xml" value="0.17119565217391305" />
