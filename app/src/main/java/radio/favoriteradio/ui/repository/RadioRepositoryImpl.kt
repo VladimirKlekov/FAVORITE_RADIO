@@ -1,16 +1,14 @@
 package radio.favoriteradio.ui.repository
 
-
 import radio.favoriteradio.R
 import radio.favoriteradio.ui.dto.Radio
 
 class RadioRepositoryImpl() : RadioRepository {
 
-    val radioList: ArrayList<Radio> = ArrayList()
+    override val listFavoriteRadio: ArrayList<Radio> = ArrayList()
+    override val listRadio: ArrayList<Radio> = ArrayList()
 
-    val test = radioList
-
-    override fun allRadio(){
+    override fun listRadio(){
         val radio1 = Radio(1,"Русское радио", R.drawable.rusradio_icon)
         val radio2 = Radio(2,"Новое радио",R.drawable.novoe_radio_icon)
         val radio3 = Radio(3,"Ретро радио", R.drawable.retro_fm_icon)
@@ -18,16 +16,22 @@ class RadioRepositoryImpl() : RadioRepository {
         val radio5 = Radio(5,"Дорожное радио",R.drawable.dorojnoe_icon)
         val radio6 = Radio(6,"Европа плюс", R.drawable.europa_plus_icon)
 
-
-        radioList.add(radio1)
-        radioList.add(radio2)
-        radioList.add(radio3)
-        radioList.add(radio4)
-        radioList.add(radio5)
-        radioList.add(radio6)
+        listRadio.add(radio1)
+        listRadio.add(radio2)
+        listRadio.add(radio3)
+        listRadio.add(radio4)
+        listRadio.add(radio5)
+        listRadio.add(radio6)
     }
 
+    override fun addListFavouriteRadio(radio:Radio) {
+        listFavoriteRadio.add(radio)
+    }
 
+    override fun getRadioById(id: Int): Radio {
+        val test = listRadio[id]
+        return test
+    }
 }
 
 

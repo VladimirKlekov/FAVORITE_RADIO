@@ -5,7 +5,11 @@ import radio.favoriteradio.ui.dto.Radio
 
 interface RadioRepository {
 
+    val listRadio: ArrayList<Radio>
+    val listFavoriteRadio: ArrayList<Radio>
 
-    fun allRadio()
+    fun listRadio()
+    fun addListFavouriteRadio(radio:Radio)
+    fun getRadioById(id:Int): Radio
 
 }
