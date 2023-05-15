@@ -32,7 +32,7 @@ class RadioAdapter(
         holder.nameRadio.text = radioList[position].nameRadio
         //подгрузка иконок
         Glide.with(context)
-            .load(radioList[position].artUri)
+            .load(radioList[position].img)
             //.apply (RequestOptions().placeholder(R.drawable.music_player_icon_slash_screen).centerCrop())
             .into(holder.image)
     }

@@ -33,16 +33,27 @@ class MainFragment: Fragment(R.layout.fragment_main) {
         (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
         //AppCompatActivity().getSupportActionBar()!!.setDisplayHomeAsUpEnabled(true)
 
+        val test = Radio(
+            1,
+            "Русское радио",
+        R.drawable.rusradio_icon)
+        val test1 = Radio(
+            2,
+            "Новое радио",
+            R.drawable.novoe_radio_icon)
+
         val musicList = ArrayList<Radio>()//список музыки
-        musicList.add()//заменил на MusicListMA= getAllAudio()
-        musicList.add("2 Song")
-        musicList.add("3 Song")
-        musicList.add("4 Song")
-        musicList.add("5 Song")
+        musicList.add(test)
+        musicList.add(test1)
+//        musicList.add("2 Song")
+//        musicList.add("3 Song")
+//        musicList.add("4 Song")
+//        musicList.add("5 Song")
         binding.musicRV.setHasFixedSize(true)
         binding.musicRV.setItemViewCacheSize(13)//размер кэша для количества музыки
         binding.musicRV.layoutManager = LinearLayoutManager(requireContext())//привязка верстки
-        radioAdapter = RadioAdapter(requireContext(),/////////////////)//передача списка музыки в адптер
+        radioAdapter = RadioAdapter(requireContext(),musicList)//передача списка музыки в адптер
+
         binding.musicRV.adapter = radioAdapter//приравнивание адаптеров
 //        binding.totalSong.text =
 //            "Total Song : " + musicAdapter.itemCount//список песен равен списку, пробелу или муз адаптеру

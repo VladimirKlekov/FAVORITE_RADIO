@@ -1,11 +1,13 @@
 package radio.favoriteradio.ui.dto
 
+import android.media.Image
 
 
 data class Radio(
-    val id: String,
+    val id: Int,
     val nameRadio: String,
-    val artUri: String// Glide загрузка изображений иконки
+    val img: Int
+    //val artUri: String// Glide загрузка изображений иконки
 )
 
 
