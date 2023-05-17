@@ -11,31 +11,24 @@ import radio.favoriteradio.ui.repository.RadioRepositoryImpl
 
 class RadioViewModel() : ViewModel() {
     private val radioRepository: RadioRepository = RadioRepositoryImpl()
-    val radioOpenEvent = MutableSharedFlow<Radio>()
 
     val dataRadio: ArrayList<Radio>
         get() = radioRepository.listRadio
+
+    val dataFavoriteRadio: ArrayList<Radio>
+        get() = radioRepository.listFavoriteRadio
 
     fun listRadio() {
         radioRepository.listRadio()
     }
 
-    fun addListFavoriteRadio(radio: Radio){
-        radioRepository.addListFavouriteRadio(radio)
-    }
-
-    fun onCard(radio: Radio) {
-        viewModelScope.launch {
-            try {
-                radioOpenEvent.emit(radio)
-                radio.id?.let {
-                    radioRepository.getRadioById(it) }
-            } catch (e: Exception) {
-                e.printStackTrace()
-            }
-        }
+    fun addListFavoriteRadio(){
+        radioRepository.addListFavouriteRadio()
     }
 
 
-}
+    }
+
+
+
 

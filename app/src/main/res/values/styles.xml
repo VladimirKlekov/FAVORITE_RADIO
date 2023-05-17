@@ -32,4 +32,13 @@
 
     </style>
 
+    <style name="Btn_favorite" parent="Widget.MaterialComponents.Button.TextButton.Icon">
+        <item name="iconTint">@color/btn_favorite</item>
+        <item name="android:minWidth">@dimen/icon_button_min_size</item>
+        <item name="android:minHeight">@dimen/icon_button_min_size</item>
+
+    </style>
+
+
+
 </resources>

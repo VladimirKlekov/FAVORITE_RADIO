@@ -4,18 +4,20 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.startActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import radio.favoriteradio.R
 import radio.favoriteradio.databinding.ItemNameRadioBinding
 import radio.favoriteradio.ui.dto.Radio
 import radio.favoriteradio.ui.ui.MainFragment
-
 
 
 class RadioAdapter(
@@ -24,9 +26,11 @@ class RadioAdapter(
 ) : RecyclerView.Adapter<RadioAdapter.MyHolder>() {
 
 
+
     class MyHolder(binding: ItemNameRadioBinding) : RecyclerView.ViewHolder(binding.root) {
         val nameRadio = binding.nameRadioTextView
         val image = binding.labelRadioImageView
+        val favoriteImg = binding.addFavoriteBtn
         val root = binding.root
     }
 
@@ -43,13 +47,18 @@ class RadioAdapter(
             .load(radioList[position].img)
             //.apply (RequestOptions().placeholder(R.drawable.music_player_icon_slash_screen).centerCrop())
             .into(holder.image)
-        holder.root.setOnClickListener {
-            sendIntent(ref = "PlayRadio", pos = position)
+        holder.favoriteImg.setOnClickListener {
+            if (radioList[position].isFavourite) {
+                radioList[position].isFavourite = false
+                holder.favoriteImg.setIconResource(R.drawable.favorite_empty_icon)
 
+            } else {
+                radioList[position].isFavourite = true
+                holder.favoriteImg.setIconResource(R.drawable.favorite_icon)
+            }
         }
+
     }
-
-
 
     override fun getItemCount(): Int {
         return radioList.size
@@ -60,13 +69,5 @@ class RadioAdapter(
         radioList = ArrayList()
         radioList.addAll(searchList)
         notifyDataSetChanged()
-    }
-    private fun sendIntent(ref : String, pos: Int){
-        val intent = Intent(context, MainFragment::class.java)
-        //для class PlayerActivity
-        intent.putExtra("index", pos)
-        intent.putExtra("class",ref)
-        //________
-        ContextCompat.startActivity(context, intent, null)
     }
 }

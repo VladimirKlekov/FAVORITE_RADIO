@@ -24,8 +24,22 @@ class RadioRepositoryImpl() : RadioRepository {
         listRadio.add(radio6)
     }
 
-    override fun addListFavouriteRadio(radio:Radio) {
-        listFavoriteRadio.add(radio)
+    override fun addListFavouriteRadio() {
+
+        val radio1 = Radio(1,"Русское радио", R.drawable.rusradio_icon)
+//        listFavoriteRadio.add(radio1)
+        listRadio.forEach { element->
+            if(element.isFavourite ){
+               listFavoriteRadio.add(element)
+
+            }
+
+
+
+    }
+
+
+
     }
 
     override fun getRadioById(id: Int): Radio {

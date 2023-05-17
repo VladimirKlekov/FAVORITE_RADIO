@@ -22,13 +22,13 @@ class MainFragment: Fragment(R.layout.fragment_main) {
     private lateinit var toggle: ActionBarDrawerToggle
     private lateinit var radioAdapter: RadioAdapter
     private val radioViewModel: RadioViewModel by viewModels()
-    private lateinit var bindingINR:ItemNameRadioBinding
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentMainBinding.bind(view)
         radioViewModel.listRadio()
+        radioViewModel.addListFavoriteRadio()
 
 //        //для навигационной панели меню
 //        toggle = ActionBarDrawerToggle(requireActivity(), binding.root, R.string.open, R.string.close)
@@ -38,6 +38,13 @@ class MainFragment: Fragment(R.layout.fragment_main) {
 //        //AppCompatActivity().getSupportActionBar()!!.setDisplayHomeAsUpEnabled(true)
 
 //
+
+//        radioViewModel.dataRadio.forEach { element->
+//            if(element.isFavourite == true){
+//                radioViewModel.addListFavoriteRadio(element)
+//            }
+//
+//        }
 
 
 

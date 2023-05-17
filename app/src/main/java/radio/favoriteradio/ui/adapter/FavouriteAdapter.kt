@@ -8,11 +8,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import radio.favoriteradio.databinding.ItemNameFavoiuriteRadioBinding
 import radio.favoriteradio.ui.dto.Radio
+import radio.favoriteradio.ui.viewmodel.RadioViewModel
 
 class FavouriteAdapter (private val context: Context,
 private var radioFavoriteList: ArrayList<Radio>
 ) : RecyclerView.Adapter<FavouriteAdapter.MyHolder>() {
-
 
     class MyHolder(binding: ItemNameFavoiuriteRadioBinding) : RecyclerView.ViewHolder(binding.root) {
         val nameRadio = binding.nameRadioTextView

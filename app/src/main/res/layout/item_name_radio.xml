@@ -28,7 +28,8 @@
             android:src="@drawable/radio_icon"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            />
 
         <TextView
             android:id="@+id/name_radio_text_view"
@@ -42,18 +43,21 @@
             app:layout_constraintStart_toEndOf="@+id/label_radio_image_view"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.421"
-            tools:text="Название радио" />
+            tools:text="Название радио"
+            />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/menuButton"
-            style="@style/Widget.AppTheme.MenuChekBox"
+            android:id="@+id/add_favorite_btn"
+            style="@style/Btn_favorite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checkable="true"
             android:contentDescription=""
-            app:icon="@drawable/menu_icon"
+            app:icon="@drawable/favorite_empty_icon"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

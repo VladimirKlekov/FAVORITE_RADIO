@@ -20,7 +20,6 @@
         <item name="iconTint">@color/share_chekbox_tint</item>
         <item name="android:minWidth">@dimen/padding_4dp</item>
         <item name="android:minHeight">@dimen/padding_4dp</item>
-
     </style>
 </resources>
 

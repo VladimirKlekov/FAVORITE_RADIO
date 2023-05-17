@@ -14,4 +14,6 @@
     <string name="close">Закрыть</string>
     <string name="list_radios">Список радиостанций</string>
     <string name="back_btn">Назад</string>
+    <string name="delete">Удалить</string>
+    <string name="favorite">Добавить в любимые</string>
 </resources>

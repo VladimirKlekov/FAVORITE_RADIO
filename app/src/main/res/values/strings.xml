@@ -15,4 +15,6 @@
     <string name="open">OPEN</string>
     <string name="close">CLOSE</string>
     <string name="back_btn">Back</string>
+    <string name="delete">Delete</string>
+    <string name="favorite">Add to Favorites</string>
 </resources>
