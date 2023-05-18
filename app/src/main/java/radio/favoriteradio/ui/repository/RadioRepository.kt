@@ -9,7 +9,7 @@ interface RadioRepository {
     val listFavoriteRadio: ArrayList<Radio>
 
     fun listRadio()
-    fun addListFavouriteRadio()
-    fun getRadioById(id:Int): Radio
+    fun addListFavouriteRadio(radio:Radio)
+
 
 }

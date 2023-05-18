@@ -20,21 +20,24 @@ class FavouriteRadio: Fragment(R.layout.fragment_favourite) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentFavouriteBinding.bind(view)
-        radioViewModel.addListFavoriteRadio()
+
 
 //        val radio1 = Radio(1,"Русское радио",R.drawable.rusradio_icon)
 //        val radioList = ArrayList<Radio>()
 //        radioList.add(radio1)
 
-        binding.favouriteRV.setHasFixedSize(true)
-        binding.favouriteRV.setItemViewCacheSize(13)
-        binding.favouriteRV.layoutManager = LinearLayoutManager(requireContext())
-        favouriteAdapter = FavouriteAdapter(requireContext(),radioViewModel.dataFavoriteRadio)
-        binding.favouriteRV.adapter = favouriteAdapter
+        radioViewModel.dataRadio.forEach { element ->
+            if (element.isFavourite) {
+                radioViewModel.addListFavoriteRadio(element)
+            }
+
+            binding.favouriteRV.setHasFixedSize(true)
+            binding.favouriteRV.setItemViewCacheSize(13)
+            binding.favouriteRV.layoutManager = LinearLayoutManager(requireContext())
+            favouriteAdapter = FavouriteAdapter(requireContext(), radioViewModel.dataFavoriteRadio)
+            binding.favouriteRV.adapter = favouriteAdapter
 
 
-
-
-
+        }
     }
 }

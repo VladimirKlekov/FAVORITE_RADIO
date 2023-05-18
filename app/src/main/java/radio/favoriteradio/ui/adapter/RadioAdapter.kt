@@ -20,14 +20,16 @@ import radio.favoriteradio.ui.dto.Radio
 import radio.favoriteradio.ui.ui.MainFragment
 
 
+
 class RadioAdapter(
     private val context: Context,
-    private var radioList: ArrayList<Radio>
+    private var radioList: ArrayList<Radio>,
+
 ) : RecyclerView.Adapter<RadioAdapter.MyHolder>() {
 
 
-
-    class MyHolder(binding: ItemNameRadioBinding) : RecyclerView.ViewHolder(binding.root) {
+    class MyHolder(binding: ItemNameRadioBinding):
+        RecyclerView.ViewHolder(binding.root) {
         val nameRadio = binding.nameRadioTextView
         val image = binding.labelRadioImageView
         val favoriteImg = binding.addFavoriteBtn
@@ -36,7 +38,9 @@ class RadioAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RadioAdapter.MyHolder {
 
-        return MyHolder(ItemNameRadioBinding.inflate(LayoutInflater.from(context), parent, false))
+        val binding = ItemNameRadioBinding.inflate(LayoutInflater.from(context), parent, false)
+
+        return MyHolder(binding)
     }
 
     override fun onBindViewHolder(holder: RadioAdapter.MyHolder, position: Int) {
@@ -48,12 +52,19 @@ class RadioAdapter(
             //.apply (RequestOptions().placeholder(R.drawable.music_player_icon_slash_screen).centerCrop())
             .into(holder.image)
         holder.favoriteImg.setOnClickListener {
-            if (radioList[position].isFavourite) {
-                radioList[position].isFavourite = false
+            val intent = Intent(context, MainFragment::class.java)
+
+            if (radioList[position].isFavourite ) {
+                intent.putExtra("like",true)
                 holder.favoriteImg.setIconResource(R.drawable.favorite_empty_icon)
+               ContextCompat.startActivity(context, intent, null)
+
+               // radioList[position].isFavourite = false
+                //holder.favoriteImg.setIconResource(R.drawable.favorite_empty_icon)
 
             } else {
-                radioList[position].isFavourite = true
+                intent.putExtra("dislike",false)
+
                 holder.favoriteImg.setIconResource(R.drawable.favorite_icon)
             }
         }

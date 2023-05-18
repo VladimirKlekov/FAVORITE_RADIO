@@ -10,11 +10,13 @@ import radio.favoriteradio.databinding.ItemNameFavoiuriteRadioBinding
 import radio.favoriteradio.ui.dto.Radio
 import radio.favoriteradio.ui.viewmodel.RadioViewModel
 
-class FavouriteAdapter (private val context: Context,
-private var radioFavoriteList: ArrayList<Radio>
+class FavouriteAdapter(
+    private val context: Context,
+    private var radioFavoriteList: ArrayList<Radio>
 ) : RecyclerView.Adapter<FavouriteAdapter.MyHolder>() {
 
-    class MyHolder(binding: ItemNameFavoiuriteRadioBinding) : RecyclerView.ViewHolder(binding.root) {
+    class MyHolder(binding: ItemNameFavoiuriteRadioBinding) :
+        RecyclerView.ViewHolder(binding.root) {
         val nameRadio = binding.nameRadioTextView
         val image = binding.labelRadioImageView
         val root = binding.root
@@ -22,10 +24,17 @@ private var radioFavoriteList: ArrayList<Radio>
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FavouriteAdapter.MyHolder {
 
-        return MyHolder(ItemNameFavoiuriteRadioBinding.inflate(LayoutInflater.from(context), parent, false))
+        return MyHolder(
+            ItemNameFavoiuriteRadioBinding.inflate(
+                LayoutInflater.from(context),
+                parent,
+                false
+            )
+        )
     }
 
     override fun onBindViewHolder(holder: FavouriteAdapter.MyHolder, position: Int) {
+
 
         holder.nameRadio.text = radioFavoriteList[position].nameRadio
         //подгрузка иконок
