@@ -53,7 +53,7 @@
             android:layout_height="wrap_content"
             android:checkable="true"
             android:contentDescription=""
-            app:icon="@drawable/favorite_empty_icon"
+            app:icon="@drawable/play_icon"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

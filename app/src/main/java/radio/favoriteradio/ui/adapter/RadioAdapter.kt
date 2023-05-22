@@ -56,7 +56,7 @@ class RadioAdapter(
 
             if (radioList[position].isFavourite ) {
                 intent.putExtra("like",true)
-                holder.favoriteImg.setIconResource(R.drawable.favorite_empty_icon)
+                holder.favoriteImg.setIconResource(R.drawable.play_icon)
                ContextCompat.startActivity(context, intent, null)
 
                // radioList[position].isFavourite = false
@@ -65,7 +65,7 @@ class RadioAdapter(
             } else {
                 intent.putExtra("dislike",false)
 
-                holder.favoriteImg.setIconResource(R.drawable.favorite_icon)
+                holder.favoriteImg.setIconResource(R.drawable.stop_icon)
             }
         }
 
